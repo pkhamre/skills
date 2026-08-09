@@ -3,15 +3,16 @@
 </p>
 
 <p align="center">
-  <a href="#installation"><strong>Install</strong></a> ·
   <a href="#session-handoff"><strong>Session Handoff</strong></a> ·
+  <a href="#decision-log"><strong>Decision Log</strong></a> ·
+  <a href="#installation"><strong>Install</strong></a> ·
   <a href="#maintaining-this-collection"><strong>Add a skill</strong></a> ·
   <a href="#license"><strong>License</strong></a>
 </p>
 
-A small, hand-maintained collection of [open agent skills](https://opencode.ai/docs/skills) I keep improving. Each one lives in its own folder under [`skills/`](skills/) and stays small enough to read in full. Drop the ones you want into your own skills directory.
+A small, hand-maintained collection of [open agent skills](https://opencode.ai/docs/skills) I keep improving. Each one lives under a category folder in [`skills/`](skills/) and stays small enough to read in full. Drop the ones you want into your own skills directory.
 
-Right now there's one. That will change.
+Right now there are two, grouped under `skills/continuity/`. That list will grow.
 
 ## Session Handoff
 
@@ -25,12 +26,19 @@ The docs it maintains:
 
 - **`HANDOFF.md`** holds where things stand and what's next.
 - **`SESSION_LOG.md`** is a running record of each session.
-- **`DECISIONS.md`** records durable choices and why they were made.
 - **`RUNBOOK.md`** lists the commands worth not rediscovering.
 
-It ships with `references/templates.md` (exact formats for each doc) and `references/read-order.md`.
+Durable decisions are recorded by Decision Log, not here. It ships with `references/templates.md` (exact formats for each doc) and `references/read-order.md`.
 
-### Installation
+## Decision Log
+
+The "why" of a choice is the part that doesn't survive on its own. The what lives in code and config; the reasoning evaporates. Decision Log writes it down at the moment the call is made, so three months later nobody has to re-litigate an architecture debate because the tradeoffs were never captured.
+
+It records the context, the options considered, the accepted tradeoffs, the rejected alternatives, and the condition that would flip the call, into `docs/DECISIONS.md`. When a decision is revisited it reads the old entry first, so the new debate starts from the recorded reasoning instead of from scratch. It ships with `references/templates.md` for the entry format.
+
+Session Handoff hands decision capture over to this skill rather than owning it itself.
+
+## Installation
 
 Install every skill in this repo:
 
@@ -42,13 +50,12 @@ Or add a single one:
 
 ```
 npx skills add pkhamre/skills --skill session-handoff
+npx skills add pkhamre/skills --skill decision-log
 ```
-
-The skill triggers on explicit session commands such as "start a session", "I'm back", or "wrap up", and ignores ordinary task-completion signals.
 
 ## Maintaining this collection
 
-Adding a skill means creating `skills/<name>/SKILL.md` with a `name` and `description` in the frontmatter, plus any bundled `references/`, `scripts/`, or `assets/` it needs. The description is what makes it trigger, so it should say both what the skill does and when to reach for it. Keep the body under a few hundred lines and push detail into reference files. See [opencode's skill docs](https://opencode.ai/docs/skills) for the layout.
+Adding a skill means creating `skills/<category>/<name>/SKILL.md` with a `name` and `description` in the frontmatter, plus any bundled `references/`, `scripts/`, or `assets/` it needs. The description is what makes it trigger, so it should say both what the skill does and when to reach for it. Keep the body under a few hundred lines and push detail into reference files. See [opencode's skill docs](https://opencode.ai/docs/skills) for the layout.
 
 Installed upstream skills and the opencode install manifest aren't tracked here. Authored skills are the contents of `skills/`.
 

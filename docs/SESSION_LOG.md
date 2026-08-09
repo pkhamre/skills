@@ -1,5 +1,8 @@
 # Session Log
 
+## 2026-08-09 20:45 UTC
+Follow-up README pass after adding the `decision-log` skill and the `continuity` category. Rewrote the root `README.md` to document both authored skills (Session Handoff and Decision Log), the category layout under `skills/continuity/`, and updated install examples to show adding either skill. Removed DECISIONS.md from the Session Handoff doc list since decision capture now belongs to Decision Log. Ran the new prose through `anti-ai-slop-writing`: 0 em dashes, 0 banned words. Recorded the category/decision-log decisions in `docs/DECISIONS.md` and refreshed `docs/HANDOFF.md`. Open items: visual preview of the SVGs (and whether they should depict decision-log), create the public repo and push, and confirm the nested `--skill <name>` install path resolves.
+
 ## 2026-08-09 19:13 UTC
 Bootstrapped documentation for the workspace and created a new skill. The workspace was empty except for the bundled skill-creator tool. Designed and built the `session-handoff` skill (workdir `.agents/skills/session-handoff/`), which maintains project docs (HANDOFF.md, SESSION_LOG.md, DECISIONS.md, RUNBOOK.md) across session start/during/end phases. Decided on explicit-command-only triggering and bundled templates. Created the initial versions of these docs as the skill's first output. Open items: validate trigger phrasing and whether the `docs/` path should be configurable.
 

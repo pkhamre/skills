@@ -29,3 +29,16 @@
 
 - **Decision:** README documents only the authored skill (`session-handoff`), omits upstream skills, and includes install + maintenance sections.
 - **Rationale:** The README is a project overview aimed at the user and the public; it should describe what this repo actually contains.
+
+## 2026-08-09 — Continuity category and decision-log
+
+- **Decision:** Introduce category subdirectories under `skills/`; both session-handoff and the new decision-log skill live under `skills/continuity/`.
+- **Rationale:** The category names the shared intent: both skills preserve knowledge across time, so they sit together under a label that says so. It scales as more skills are added.
+- **Rejected:** `skills/decisions/` for decision-log; keeping session-handoff at `skills/session-handoff/` while adding a sibling category.
+
+- **Decision:** decision-log captures why a decision was made (context, options, tradeoffs, rejected alternatives, what would change it) in `docs/DECISIONS.md`. It replaces session-handoff's responsibility for DECISIONS.md, which now delegates to it.
+- **Rationale:** A dedicated skill holds a richer, more honest record than a maintenance step inside session-handoff, and it triggers on decision moments rather than on session lifecycle commands.
+- **Rejected:** Keeping DECISIONS.md maintenance inside session-handoff.
+
+- **Decision:** README now documents both authored skills (Session Handoff and Decision Log) and the category layout.
+- **Rationale:** The repo contains two authored skills; the overview should match that.
