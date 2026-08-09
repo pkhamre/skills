@@ -35,20 +35,6 @@ Append new entries at the end (or top, if the file's existing convention puts ne
 
 Each session gets one entry. The timestamp should match the session's end time.
 
-## DECISIONS.md entry
-
-Add durable decisions as dated entries. Each should capture what was decided, why, and (optionally) what was rejected:
-
-```markdown
-## YYYY-MM-DD — <Short decision title>
-
-- **Decision:** <What we decided.>
-- **Rationale:** <Why this choice.>
-- **Rejected:** <Alternatives considered and why they were passed over, if any.>
-```
-
-Only log decisions that will shape future work — not routine operational choices.
-
 ## RUNBOOK.md entry
 
 Add or update operational commands. Organize by purpose so commands are easy to find:

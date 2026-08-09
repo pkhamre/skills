@@ -1,6 +1,6 @@
 ---
 name: session-handoff
-description: Manage project docs across a session lifecycle, including resuming. Use this skill when the user gives an explicit session command — starting a session ("start a session", "kick off"), resuming one ("I'm back", "let's continue", "resume", "pick up where we left off", "continue where we left off", "what's the state of things", "what should I do next"), or ending one ("wrap up", "end the session", "update the handoff", "log this session", "write the session log"). When resuming, the skill loads the docs, orients on the current state, and proposes the highest-value next action. When ending, it updates HANDOFF.md, SESSION_LOG.md, DECISIONS.md, and RUNBOOK.md so the next session picks up cleanly. Do NOT trigger on ordinary tasks or completion signals on their own — this skill runs only when the user explicitly asks to begin, resume, or end a documented session.
+description: Manage project docs across a session lifecycle, including resuming. Use this skill when the user gives an explicit session command — starting a session ("start a session", "kick off"), resuming one ("I'm back", "let's continue", "resume", "pick up where we left off", "continue where we left off", "what's the state of things", "what should I do next"), or ending one ("wrap up", "end the session", "update the handoff", "log this session", "write the session log"). When resuming, the skill loads the docs, orients on the current state, and proposes the highest-value next action. When ending, it updates HANDOFF.md and SESSION_LOG.md so the next session picks up cleanly. Decisions are captured by the decision-log skill, not here. Do NOT trigger on ordinary tasks or completion signals on their own — this skill runs only when the user explicitly asks to begin, resume, or end a documented session.
 ---
 
 # Session Handoff
@@ -18,10 +18,10 @@ When the user asks to start, resume, or check on the state of a session, load co
 1. `README.md`
 2. `docs/HANDOFF.md`
 3. the latest (most recent) entry in `docs/SESSION_LOG.md`
-4. `docs/DECISIONS.md`
+4. the decision log at `docs/DECISIONS.md` (maintained by the decision-log skill)
 5. `docs/RUNBOOK.md`
 
-Read them in this order on purpose: README gives the project's purpose, HANDOFF gives where things currently stand, the latest session log entry adds recent narrative, DECISIONS explains why past choices were made, and RUNBOOK holds the operational commands. Each builds on the last.
+Read them in this order on purpose: README gives the project's purpose, HANDOFF gives where things currently stand, the latest session log entry adds recent narrative, the decision log explains why past choices were made (maintained by the decision-log skill, not here), and RUNBOOK holds the operational commands. Each builds on the last.
 
 **If a file doesn't exist yet:** note it, don't error. This usually means the repo hasn't been bootstrapped. If the user expects the docs to exist and they don't, offer to bootstrap them (see Phase 1 bootstrap below).
 
@@ -35,18 +35,18 @@ If the user is resuming (rather than starting fresh), go one step further than o
 If this is the first documented session and the user wants the docs created, create:
 - `docs/HANDOFF.md` — with a `Last updated` timestamp, current state, and empty next-actions section
 - `docs/SESSION_LOG.md` — with a header and the current session's first entry
-- `docs/DECISIONS.md` — with a header and any decisions already made
 - `docs/RUNBOOK.md` — with a header and any known operational commands
 
-Use the templates in `references/templates.md`. Don't fabricate history that isn't real.
+Do not create `docs/DECISIONS.md` yourself. Decisions belong to the decision-log skill; if the user wants the decision log set up, invoke decision-log to bootstrap it. Use the templates in `references/templates.md`. Don't fabricate history that isn't real.
 
 ## Phase 2: During Work
 
 Keep the docs aligned as the session proceeds. You don't need to update them after every micro-step — update them when meaningfully things change.
 
 - **`docs/HANDOFF.md`** — keep the current state and next actions in sync with reality as the work progresses. This is the primary "where we are" document.
-- **`docs/DECISIONS.md`** — record durable decisions (and their rationale) at the moment you make them. A decision is durable if it shapes future work: a chosen approach, a rejected alternative, a scope call. Don't log trivial operational choices here.
 - **`docs/RUNBOOK.md`** — record changes to operational commands: new build/test/deploy commands, changed flags, commands the team should know. If you run a notable command or discover a required setup step, capture it here so it's not rediscovered later.
+
+**Decisions are not handled here.** When a durable decision is made — a chosen approach, a rejected alternative, a scope call — do not log it yourself. Invoke the decision-log skill to capture it in `docs/DECISIONS.md`. You keep the decision log in sync only in the narrow sense of reading it for context.
 
 Follow whatever format those files already use; if there's no established format, use the templates in `references/templates.md`.
 
@@ -64,4 +64,4 @@ Finally, verify no secrets were added to tracked files: scan the files you touch
 
 ## Templates
 
-Use `references/templates.md` for exact formats of HANDOFF current-state sections, SESSION_LOG entries, DECISIONS entries, and RUNBOOK entries.
+Use `references/templates.md` for exact formats of HANDOFF current-state sections, SESSION_LOG entries, and RUNBOOK entries. For decision records, see the decision-log skill's `references/templates.md` instead.
