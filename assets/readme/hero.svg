@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="300" viewBox="0 0 1200 300"
+     width="1200" height="320" viewBox="0 0 1200 320"
      role="img" aria-labelledby="title desc">
   <title id="title">Open Agent Skills</title>
   <desc id="desc">A hand-maintained collection of open agent skills for agents, so work survives across sessions and choices keep their reasoning.</desc>
 
-  <rect width="1200" height="300" rx="26" fill="#0d1117"/>
+  <rect width="1200" height="320" rx="26" fill="#0d1117"/>
 
   <!-- Title block, centered -->
-  <g id="title-block" transform="translate(600 0)">
+  <g id="title-block" transform="translate(600 30)">
     <text x="0" y="0" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="20" letter-spacing="3" fill="#e3b341" text-anchor="middle">OPEN AGENT SKILLS</text>
-    <text x="0" y="62" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">Hand-maintained</text>
-    <text x="0" y="102" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">skills for agents</text>
-    <text x="0" y="142" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">that last.</text>
+    <text x="0" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">Hand-maintained</text>
+    <text x="0" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">skills for agents</text>
+    <text x="0" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">that last.</text>
 
-    <text x="0" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="21" fill="#9aa4b0" text-anchor="middle">Each skill lives under a category in</text>
-    <text x="0" y="228" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21" fill="#9aa4b0" text-anchor="middle">skills/<tspan fill="#e6edf3">category</tspan>/</text>
-    <text x="0" y="268" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681" text-anchor="middle">MIT licensed · two skills, more coming</text>
+    <text x="0" y="198" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="21" fill="#9aa4b0" text-anchor="middle">Each skill lives under a category in</text>
+    <text x="0" y="226" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21" fill="#9aa4b0" text-anchor="middle">skills/<tspan fill="#e6edf3">category</tspan>/</text>
+    <text x="0" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681" text-anchor="middle">MIT licensed · two skills, more coming</text>
   </g>
 </svg>
