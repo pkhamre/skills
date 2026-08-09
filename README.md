@@ -23,10 +23,10 @@ Sessions are ephemeral; the model and the human both forget context between them
 
 The docs it maintains:
 
-- **`HANDOFF.md`** — where things stand and what's next.
-- **`SESSION_LOG.md`** — a running record of each session.
-- **`DECISIONS.md`** — durable choices and why they were made.
-- **`RUNBOOK.md`** — the operational commands worth not rediscovering.
+- **`HANDOFF.md`** holds where things stand and what's next.
+- **`SESSION_LOG.md`** is a running record of each session.
+- **`DECISIONS.md`** records durable choices and why they were made.
+- **`RUNBOOK.md`** lists the commands worth not rediscovering.
 
 It ships with `references/templates.md` (exact formats for each doc) and `references/read-order.md`.
 
@@ -44,7 +44,7 @@ Or add a single one:
 npx skills add pkhamre/skills --skill session-handoff
 ```
 
-The skill triggers on explicit session commands — "start a session", "I'm back", "wrap up" — and ignores ordinary task-completion signals.
+The skill triggers on explicit session commands such as "start a session", "I'm back", or "wrap up", and ignores ordinary task-completion signals.
 
 ## Maintaining this collection
 
