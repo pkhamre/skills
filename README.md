@@ -1,22 +1,36 @@
-# Open Agent Skills
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="Open Agent Skills: hand-maintained skills for agents that last. Shows session-handoff keeping project docs across the start, during, and end phases of a session.">
+</p>
 
-A small collection of open agent skills I've written and keep maintaining. Each one lives in its own directory under [`skills/`](skills/), and you drop the folder you want into your own `.agents/skills/` to use it.
+<p align="center">
+  <a href="#installation"><strong>Install</strong></a> ·
+  <a href="#session-handoff"><strong>Session Handoff</strong></a> ·
+  <a href="#maintaining-this-collection"><strong>Add a skill</strong></a> ·
+  <a href="#license"><strong>License</strong></a>
+</p>
 
-Right now there's one skill here. That will change.
+A small, hand-maintained collection of [open agent skills](https://opencode.ai/docs/skills) I keep improving. Each one lives in its own folder under [`skills/`](skills/) and stays small enough to read in full. Drop the ones you want into your own skills directory.
+
+Right now there's one. That will change.
 
 ## Session Handoff
 
-Session Handoff keeps a tiny set of project docs so work survives between sessions. The model and the human both forget context between sessions; these docs are the durable memory. When you start a session it reads them in order — README, `docs/HANDOFF.md`, the latest `docs/SESSION_LOG.md` entry, `docs/DECISIONS.md`, `docs/RUNBOOK.md` — orients, and proposes the highest-value next step. When you wrap up it writes the current state and next actions back down so the next session picks up cleanly instead of re-discovering everything.
+Sessions are ephemeral; the model and the human both forget context between them. Session Handoff keeps a tiny set of project docs so work survives. When a session starts it reads them in order, orients on where things stand, and proposes the highest-value next step. When it ends it writes current state and next actions back down, so the next session picks up cleanly instead of re-discovering everything.
 
-It runs in three phases:
+<p align="center">
+  <img src="./assets/readme/workflow.svg" width="100%" alt="Session Handoff lifecycle: start reads the docs and orients, during keeps them in sync, end writes state back down.">
+</p>
 
-- **Start / resume** — load the docs in a fixed order, orient on where things stand, and suggest what to do next.
-- **During work** — keep `HANDOFF.md`, `DECISIONS.md`, and `RUNBOOK.md` in sync as meaningful things change.
-- **End** — update the handoff, append a session log entry, and scan what you touched for secrets before closing.
+The docs it maintains:
+
+- **`HANDOFF.md`** — where things stand and what's next.
+- **`SESSION_LOG.md`** — a running record of each session.
+- **`DECISIONS.md`** — durable choices and why they were made.
+- **`RUNBOOK.md`** — the operational commands worth not rediscovering.
 
 It ships with `references/templates.md` (exact formats for each doc) and `references/read-order.md`.
 
-### Install
+### Installation
 
 Install every skill in this repo:
 
@@ -24,7 +38,7 @@ Install every skill in this repo:
 npx skills add pkhamre/skills
 ```
 
-or add a single one:
+Or add a single one:
 
 ```
 npx skills add pkhamre/skills --skill session-handoff
