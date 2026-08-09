@@ -18,13 +18,19 @@ It ships with `references/templates.md` (exact formats for each doc) and `refere
 
 ### Install
 
-Copy the folder into your skills directory:
+Install every skill in this repo:
 
 ```
-cp -r skills/session-handoff ~/.config/opencode/skills/
+npx skills add pkhamre/skills
 ```
 
-or place it at `.agents/skills/session-handoff/` inside a project. The skill triggers on explicit session commands — "start a session", "I'm back", "wrap up" — and ignores ordinary task-completion signals.
+or add a single one:
+
+```
+npx skills add pkhamre/skills --skill session-handoff
+```
+
+The skill triggers on explicit session commands — "start a session", "I'm back", "wrap up" — and ignores ordinary task-completion signals.
 
 ## Maintaining this collection
 
