@@ -1,0 +1,5 @@
+# Installed opencode skills (upstream). Authored skills live in skills/.
+.agents/
+
+# opencode skill install manifest
+skills-lock.json

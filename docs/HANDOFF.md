@@ -1,15 +1,15 @@
 # Handoff
 
 ## Last updated
-2026-08-09 19:13 UTC
+2026-08-09 19:54 UTC
 
 ## Current state
-This is the first documented session. The workspace was essentially empty apart from the bundled `skill-creator` tool under `.agents/skills/`. In this session we designed and built a new opencode skill, `session-handoff`, which maintains project docs across a session lifecycle (start / during / end phases). The skill was created at `.agents/skills/session-handoff/` with a `SKILL.md` workflow plus `references/templates.md` and `references/read-order.md`. These handoff docs are the first real output the skill produced, bootstrapping the repo's documentation.
+This repo is being prepared for public release as a collection of authored opencode skills. The canonical source for `session-handoff` now lives at `skills/session-handoff/` (a copy remains installed at `.agents/skills/session-handoff/` for local use). The repo no longer tracks installed upstream skills or the opencode install manifest: added `.gitignore` (ignoring `.agents/` and `skills-lock.json`), untracked the previously tracked installed skills, and added an MIT `LICENSE`. A root `README.md` was written as the project overview, documenting `session-handoff` as the sole authored skill, plus install and maintenance sections. No remote is configured and nothing has been pushed yet.
 
 ## Next actions
-1. Review the `session-handoff` skill's trigger phrasing and confirm the hardcoded `docs/` path should stay as-is (or become configurable).
-2. Run a full start/end cycle using the skill to validate the workflow end-to-end in a test scenario.
-3. Decide whether to add test cases (`evals/`) for the skill or keep the lighter draft-and-review approach.
+1. Review the README for accuracy and tone before making the first public commit.
+2. Create the public GitHub repo and push (no remote is configured yet).
+3. Decide whether to add more authored skills under `skills/` over time, using the README's maintenance section.
 
 ## Blockers
 None.

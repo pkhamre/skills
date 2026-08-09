@@ -16,3 +16,16 @@
 
 - **Decision:** Bundle exact doc templates in `references/templates.md`, but prefer each file's existing format when one is established.
 - **Rationale:** Consistent output across sessions without fighting repos that already have their own doc conventions.
+
+## 2026-08-09 — Repo layout for public release
+
+- **Decision:** Authored skills live under `skills/<name>/` as the tracked canonical source; installed upstream skills under `.agents/skills/` and the opencode install manifest (`skills-lock.json`) are gitignored and untracked. `session-handoff` is duplicated (canonical in `skills/`, installed copy kept at `.agents/skills/session-handoff/`).
+- **Rationale:** The repo is a home for skills the user authors; upstream-installed dependencies are not part of the authored collection and shouldn't be published. Keeping an installed copy lets the skill keep working locally while the repo holds the source.
+- **Rejected:** Tracking installed skills in the repo; moving `session-handoff` out of `.agents/skills/` entirely (it needs to stay installed for local use).
+- **Decision:** README documents only the authored skill (`session-handoff`), omits upstream skills, and includes install + maintenance sections. License is MIT.
+- **Rationale:** The README is a project overview aimed at the user and the public; it should describe what this repo actually contains.
+
+## 2026-08-09 — README content
+
+- **Decision:** README documents only the authored skill (`session-handoff`), omits upstream skills, and includes install + maintenance sections.
+- **Rationale:** The README is a project overview aimed at the user and the public; it should describe what this repo actually contains.
