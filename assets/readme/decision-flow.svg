@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="170" viewBox="0 0 1200 170"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Decision Log capture</title>
+  <desc id="desc">Three stages: capture a decision while the tradeoffs are fresh, record context options and tradeoffs, then log what would change it into DECISIONS.md.</desc>
+
+  <rect width="1200" height="170" rx="20" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Capture -->
+  <g transform="translate(64 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">1 · Capture</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">A decision is made,</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">the tradeoffs are fresh.</text>
+  </g>
+
+  <line x1="392" y1="60" x2="484" y2="60" stroke="#e3b341" stroke-width="2"/>
+  <path d="M484 60 l-10 -6 v12 z" fill="#e3b341"/>
+
+  <!-- Record -->
+  <g transform="translate(504 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">2 · Record</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">Context, options, tradeoffs,</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">rejected alternatives.</text>
+  </g>
+
+  <line x1="832" y1="60" x2="924" y2="60" stroke="#e3b341" stroke-width="2"/>
+  <path d="M924 60 l-10 -6 v12 z" fill="#e3b341"/>
+
+  <!-- Log -->
+  <g transform="translate(944 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">3 · Log</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">Write what would change</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">it, into <tspan font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#e6edf3">DECISIONS.md</tspan></text>
+  </g>
+</svg>

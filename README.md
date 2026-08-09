@@ -34,7 +34,15 @@ Durable decisions are recorded by Decision Log, not here. It ships with `referen
 
 The "why" of a choice is the part that doesn't survive on its own. The what lives in code and config; the reasoning evaporates. Decision Log writes it down at the moment the call is made, so three months later nobody has to re-litigate an architecture debate because the tradeoffs were never captured.
 
+<p align="center">
+  <img src="./assets/readme/decision-flow.svg" width="100%" alt="Decision Log capture: capture a decision while the tradeoffs are fresh, record the context options and tradeoffs, then log what would change it into DECISIONS.md.">
+</p>
+
 It records the context, the options considered, the accepted tradeoffs, the rejected alternatives, and the condition that would flip the call, into `docs/DECISIONS.md`. When a decision is revisited it reads the old entry first, so the new debate starts from the recorded reasoning instead of from scratch. It ships with `references/templates.md` for the entry format.
+
+<p align="center">
+  <img src="./assets/readme/decision-record.svg" width="100%" alt="A recorded decision in DECISIONS.md: the decision, its context, options considered, tradeoffs, rejected alternatives, and what would change the call.">
+</p>
 
 Session Handoff hands decision capture over to this skill rather than owning it itself.
 

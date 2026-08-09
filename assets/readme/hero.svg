@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="340" viewBox="0 0 1200 340"
+     width="1200" height="440" viewBox="0 0 1200 440"
      role="img" aria-labelledby="title desc">
   <title id="title">Open Agent Skills</title>
-  <desc id="desc">A hand-maintained collection of open agent skills. Left side shows the name and value; right side shows session-handoff keeping project docs across the start, during, and end phases of a session.</desc>
+  <desc id="desc">A hand-maintained collection of open agent skills. Left side shows the name and value; right side shows the two skills: session-handoff keeping state across sessions, and decision-log capturing why each decision was made.</desc>
 
   <defs>
     <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
@@ -11,7 +11,7 @@
     </linearGradient>
   </defs>
 
-  <rect width="1200" height="340" rx="26" fill="#0d1117"/>
+  <rect width="1200" height="440" rx="26" fill="#0d1117"/>
 
   <!-- Title block -->
   <g id="title-block" transform="translate(64 52)">
@@ -20,34 +20,40 @@
     <text x="0" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3">skills for agents</text>
     <text x="0" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3">that last.</text>
 
-    <text x="0" y="196" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="21" fill="#9aa4b0">Each skill lives in its own folder under</text>
-    <text x="0" y="224" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21" fill="#9aa4b0">skills/<tspan fill="#e6edf3">name</tspan>/</text>
-    <text x="0" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681">MIT licensed · one skill today, more coming</text>
+    <text x="0" y="196" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="21" fill="#9aa4b0">Each skill lives under a category in</text>
+    <text x="0" y="224" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21" fill="#9aa4b0">skills/<tspan fill="#e6edf3">category</tspan>/</text>
+    <text x="0" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681">MIT licensed · two skills, more coming</text>
   </g>
 
-  <!-- Session-handoff proof panel -->
-  <g id="project-proof" transform="translate(704 52)">
-    <rect width="432" height="248" rx="18" fill="url(#panel)" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Skills proof panel -->
+  <g id="project-proof" transform="translate(704 44)">
+    <rect width="432" height="368" rx="18" fill="url(#panel)" stroke="#30363d" stroke-width="1.5"/>
 
-    <!-- panel heading -->
-    <circle cx="40" cy="40" r="6" fill="#e3b341"/>
-    <text x="58" y="46" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" font-weight="600" fill="#e6edf3">session-handoff</text>
+    <!-- session-handoff block -->
+    <circle cx="40" cy="44" r="6" fill="#e3b341"/>
+    <text x="58" y="50" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" font-weight="600" fill="#e6edf3">session-handoff</text>
 
-    <!-- lifecycle phases -->
     <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#9aa4b0">
-      <circle cx="40" cy="88" r="5" fill="#e6edf3"/>
-      <text x="58" y="93">START · reads the docs, orients</text>
-      <circle cx="40" cy="126" r="5" fill="#e6edf3"/>
-      <text x="58" y="131">DURING · keeps state in sync</text>
-      <circle cx="40" cy="164" r="5" fill="#e6edf3"/>
-      <text x="58" y="169">END · writes state back down</text>
+      <circle cx="40" cy="94" r="5" fill="#e6edf3"/>
+      <text x="58" y="99">START · reads the docs, orients</text>
+      <circle cx="40" cy="132" r="5" fill="#e6edf3"/>
+      <text x="58" y="137">DURING · keeps state in sync</text>
+      <circle cx="40" cy="170" r="5" fill="#e6edf3"/>
+      <text x="58" y="175">END · writes state back down</text>
     </g>
 
-    <!-- doc stack -->
-    <line x1="40" y1="192" x2="392" y2="192" stroke="#30363d" stroke-width="1.5"/>
+    <line x1="40" y1="200" x2="392" y2="200" stroke="#30363d" stroke-width="1.5"/>
     <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#6e7681">
-      <text x="40" y="218">HANDOFF.md  ·  SESSION_LOG.md</text>
-      <text x="40" y="240">DECISIONS.md  ·  RUNBOOK.md</text>
+      <text x="40" y="226">HANDOFF.md  ·  SESSION_LOG.md</text>
+      <text x="40" y="248">RUNBOOK.md</text>
     </g>
+
+    <!-- decision-log block -->
+    <line x1="40" y1="272" x2="392" y2="272" stroke="#30363d" stroke-width="1.5"/>
+    <circle cx="40" cy="300" r="6" fill="#e3b341"/>
+    <text x="58" y="306" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" font-weight="600" fill="#e6edf3">decision-log</text>
+
+    <text x="40" y="332" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#9aa4b0">captures the why, not just</text>
+    <text x="40" y="354" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#9aa4b0">the what <tspan fill="#6e7681">·</tspan> <tspan fill="#e6edf3">DECISIONS.md</tspan></text>
   </g>
 </svg>

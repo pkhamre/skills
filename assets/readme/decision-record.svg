@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="360" viewBox="0 0 1200 360"
+     role="img" aria-labelledby="title desc">
+  <title id="title">A recorded decision</title>
+  <desc id="desc">An example DECISIONS.md entry showing the fields decision-log records: decision, context, options considered, tradeoffs, rejected alternatives, and what would change the call.</desc>
+
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#11161c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="360" rx="26" fill="#0d1117"/>
+
+  <g id="card" transform="translate(64 40)">
+    <rect width="1072" height="280" rx="18" fill="url(#panel)" stroke="#30363d" stroke-width="1.5"/>
+
+    <!-- heading -->
+    <text x="36" y="40" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" font-weight="600" fill="#e6edf3">## 2026-08-09 — Move reads onto the new pipeline</text>
+
+    <line x1="36" y1="64" x2="1036" y2="64" stroke="#30363d" stroke-width="1.5"/>
+
+    <!-- field rows -->
+    <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="19">
+      <!-- row 1 -->
+      <text x="36" y="100" font-weight="600" fill="#e3b341">Decision:</text>
+      <text x="200" y="100" fill="#e6edf3">Move reads onto the new pipeline.</text>
+
+      <!-- row 2 -->
+      <text x="36" y="134" font-weight="600" fill="#e3b341">Context:</text>
+      <text x="200" y="134" fill="#9aa4b0">The old queue silently drops retries under load.</text>
+
+      <!-- row 3 -->
+      <text x="36" y="168" font-weight="600" fill="#e3b341">Options:</text>
+      <text x="200" y="168" fill="#9aa4b0">Patch in place · migrate · rewrite.</text>
+
+      <!-- row 4 -->
+      <text x="36" y="202" font-weight="600" fill="#e3b341">Tradeoffs:</text>
+      <text x="200" y="202" fill="#9aa4b0">Migration risk, weighed against weeks of firefighting.</text>
+
+      <!-- row 5 -->
+      <text x="36" y="236" font-weight="600" fill="#e3b341">Rejected:</text>
+      <text x="200" y="236" fill="#9aa4b0">Patching in place (symptom, not cause).</text>
+
+      <!-- row 6 -->
+      <text x="36" y="270" font-weight="600" fill="#e3b341">Would change if:</text>
+      <text x="200" y="270" fill="#9aa4b0">Reads stay under 500/s for a month.</text>
+    </g>
+  </g>
+</svg>
