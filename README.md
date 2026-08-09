@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="Open Agent Skills: hand-maintained skills for agents that last. Shows session-handoff keeping project docs across the start, during, and end phases of a session.">
+  <img src="./assets/readme/hero.svg" width="100%" alt="Open Agent Skills: hand-maintained skills for agents that last. Each skill lives under a category in the skills directory.">
 </p>
 
 <p align="center">

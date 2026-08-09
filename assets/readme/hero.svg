@@ -1,59 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200" height="440" viewBox="0 0 1200 440"
+     width="1200" height="300" viewBox="0 0 1200 300"
      role="img" aria-labelledby="title desc">
   <title id="title">Open Agent Skills</title>
-  <desc id="desc">A hand-maintained collection of open agent skills. Left side shows the name and value; right side shows the two skills: session-handoff keeping state across sessions, and decision-log capturing why each decision was made.</desc>
+  <desc id="desc">A hand-maintained collection of open agent skills for agents, so work survives across sessions and choices keep their reasoning.</desc>
 
-  <defs>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#161b22"/>
-      <stop offset="1" stop-color="#11161c"/>
-    </linearGradient>
-  </defs>
+  <rect width="1200" height="300" rx="26" fill="#0d1117"/>
 
-  <rect width="1200" height="440" rx="26" fill="#0d1117"/>
+  <!-- Title block, centered -->
+  <g id="title-block" transform="translate(600 0)">
+    <text x="0" y="0" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="20" letter-spacing="3" fill="#e3b341" text-anchor="middle">OPEN AGENT SKILLS</text>
+    <text x="0" y="62" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">Hand-maintained</text>
+    <text x="0" y="102" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">skills for agents</text>
+    <text x="0" y="142" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3" text-anchor="middle">that last.</text>
 
-  <!-- Title block -->
-  <g id="title-block" transform="translate(64 52)">
-    <text x="0" y="0" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="20" letter-spacing="3" fill="#e3b341">OPEN AGENT SKILLS</text>
-    <text x="0" y="60" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3">Hand-maintained</text>
-    <text x="0" y="100" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3">skills for agents</text>
-    <text x="0" y="140" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="48" font-weight="700" fill="#e6edf3">that last.</text>
-
-    <text x="0" y="196" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="21" fill="#9aa4b0">Each skill lives under a category in</text>
-    <text x="0" y="224" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21" fill="#9aa4b0">skills/<tspan fill="#e6edf3">category</tspan>/</text>
-    <text x="0" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681">MIT licensed · two skills, more coming</text>
-  </g>
-
-  <!-- Skills proof panel -->
-  <g id="project-proof" transform="translate(704 44)">
-    <rect width="432" height="368" rx="18" fill="url(#panel)" stroke="#30363d" stroke-width="1.5"/>
-
-    <!-- session-handoff block -->
-    <circle cx="40" cy="44" r="6" fill="#e3b341"/>
-    <text x="58" y="50" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" font-weight="600" fill="#e6edf3">session-handoff</text>
-
-    <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#9aa4b0">
-      <circle cx="40" cy="94" r="5" fill="#e6edf3"/>
-      <text x="58" y="99">START · reads the docs, orients</text>
-      <circle cx="40" cy="132" r="5" fill="#e6edf3"/>
-      <text x="58" y="137">DURING · keeps state in sync</text>
-      <circle cx="40" cy="170" r="5" fill="#e6edf3"/>
-      <text x="58" y="175">END · writes state back down</text>
-    </g>
-
-    <line x1="40" y1="200" x2="392" y2="200" stroke="#30363d" stroke-width="1.5"/>
-    <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#6e7681">
-      <text x="40" y="226">HANDOFF.md  ·  SESSION_LOG.md</text>
-      <text x="40" y="248">RUNBOOK.md</text>
-    </g>
-
-    <!-- decision-log block -->
-    <line x1="40" y1="272" x2="392" y2="272" stroke="#30363d" stroke-width="1.5"/>
-    <circle cx="40" cy="300" r="6" fill="#e3b341"/>
-    <text x="58" y="306" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="22" font-weight="600" fill="#e6edf3">decision-log</text>
-
-    <text x="40" y="332" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#9aa4b0">captures the why, not just</text>
-    <text x="40" y="354" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="17" fill="#9aa4b0">the what <tspan fill="#6e7681">·</tspan> <tspan fill="#e6edf3">DECISIONS.md</tspan></text>
+    <text x="0" y="200" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="21" fill="#9aa4b0" text-anchor="middle">Each skill lives under a category in</text>
+    <text x="0" y="228" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21" fill="#9aa4b0" text-anchor="middle">skills/<tspan fill="#e6edf3">category</tspan>/</text>
+    <text x="0" y="268" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681" text-anchor="middle">MIT licensed · two skills, more coming</text>
   </g>
 </svg>
