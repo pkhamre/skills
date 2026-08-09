@@ -1,6 +1,6 @@
-# OpenCode Skills
+# Open Agent Skills
 
-A small collection of [opencode](https://opencode.ai) skills I've written and keep maintaining. Each one lives in its own directory under [`skills/`](skills/), and you drop the folder you want into your own `.agents/skills/` to use it.
+A small collection of open agent skills I've written and keep maintaining. Each one lives in its own directory under [`skills/`](skills/), and you drop the folder you want into your own `.agents/skills/` to use it.
 
 Right now there's one skill here. That will change.
 
@@ -18,7 +18,7 @@ It ships with `references/templates.md` (exact formats for each doc) and `refere
 
 ### Install
 
-Copy the folder into your opencode skills directory:
+Copy the folder into your skills directory:
 
 ```
 cp -r skills/session-handoff ~/.config/opencode/skills/

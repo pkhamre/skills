@@ -1,4 +1,4 @@
-# Installed opencode skills (upstream). Authored skills live in skills/.
+# Installed agent skills (upstream). Authored skills live in skills/.
 .agents/
 
 # opencode skill install manifest
