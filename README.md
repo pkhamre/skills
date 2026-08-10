@@ -51,6 +51,10 @@ Session Handoff hands decision capture over to this skill rather than owning it 
 
 A rough idea is not a plan. Idea Developer takes the half-formed tech or product thought and interviews it into a one-page plan. It asks one question at a time, adapts to whatever the user just said, and probes the weak spots: an audience of "everyone", a differentiator of "it's just better", a scope that quietly covers three products. After five to ten questions it hands back a filled template with a one-liner, problem, audience, solution, differentiators, MVP scope, risks, and next actions. The template fills as the conversation runs, so the plan is already written by the time the interview ends.
 
+<p align="center">
+  <img src="./assets/readme/idea-workflow.svg" width="100%" alt="Idea Developer workflow: start with a rough idea, interview one question at a time and probe weak spots, close with a filled one-page plan.">
+</p>
+
 It ships with `references/questions.md`, the question bank organized by theme, each section carrying a probe that names the weak spot to push on.
 
 ## Installation
