@@ -1,0 +1,59 @@
+{
+  "skill_name": "idea-developer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I keep having this idea about a parking app. You know how in most cities you circle the block forever looking for a spot? I want to build something that shows where parking is actually available in real time. My buddy says everyone has tried this and it never works, but I think with the right data source it could. Can you help me turn this into a real plan I can act on?",
+      "expected_output": "A one-page markdown plan for the parking idea following the skill template: one-liner, problem, audience, solution, differentiators, MVP scope, risks, next actions. The interviewer asks probing questions (one at a time) to sharpen the vague spots like who the user is and how the data would actually be sourced.",
+      "files": [],
+      "expectations": [
+        "Plan includes the One-liner field",
+        "Plan includes the Problem section",
+        "Plan includes the Audience section",
+        "Plan includes the Solution section",
+        "Plan includes the Differentiators section",
+        "Plan includes the MVP scope section",
+        "Plan includes the Risks section",
+        "Plan includes the Next actions section",
+        "Plan stays a one-pager (under 900 words)",
+        "Audience section names a specific user, not a generic everyone"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "ok so I have this rough idea for a Chrome extension. I'm the worst tab hoarder, I've got like 400 tabs open and I never close them and then I can't find anything. I want to build a thing that helps people like me manage their tabs, maybe session saving or a better search. Is this actually worth building? Could you develop the idea into a plan for me?",
+      "expected_output": "A one-page markdown plan for the tab-management extension following the skill template: one-liner, problem, audience, solution, differentiators, MVP scope, risks, next actions. The interviewer asks probing questions that challenge the overlap with existing tab managers and pin down the specific user and core action.",
+      "files": [],
+      "expectations": [
+        "Plan includes the One-liner field",
+        "Plan includes the Problem section",
+        "Plan includes the Audience section",
+        "Plan includes the Solution section",
+        "Plan includes the Differentiators section",
+        "Plan includes the MVP scope section",
+        "Plan includes the Risks section",
+        "Plan includes the Next actions section",
+        "Plan stays a one-pager (under 900 words)",
+        "Audience section names a specific user, not a generic everyone"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm a developer and I keep coming back to this idea for a CLI tool that summarizes what a repo has been doing over time, so you can understand a codebase without reading every single commit. I have no idea if anyone would actually use it, honestly. Let's work through this together and make a plan.",
+      "expected_output": "A one-page markdown plan for the git-history CLI tool following the skill template: one-liner, problem, audience, solution, differentiators, MVP scope, risks, next actions. The interviewer asks probing questions that surface who the real user is and whether the tool beats reading git log directly.",
+      "files": [],
+      "expectations": [
+        "Plan includes the One-liner field",
+        "Plan includes the Problem section",
+        "Plan includes the Audience section",
+        "Plan includes the Solution section",
+        "Plan includes the Differentiators section",
+        "Plan includes the MVP scope section",
+        "Plan includes the Risks section",
+        "Plan includes the Next actions section",
+        "Plan stays a one-pager (under 900 words)",
+        "Audience section names a specific user, not a generic everyone"
+      ]
+    }
+  ]
+}

@@ -5,6 +5,7 @@
 <p align="center">
   <a href="#session-handoff"><strong>Session Handoff</strong></a> ·
   <a href="#decision-log"><strong>Decision Log</strong></a> ·
+  <a href="#idea-developer"><strong>Idea Developer</strong></a> ·
   <a href="#installation"><strong>Install</strong></a> ·
   <a href="#maintaining-this-collection"><strong>Add a skill</strong></a> ·
   <a href="#license"><strong>License</strong></a>
@@ -12,7 +13,7 @@
 
 A small, hand-maintained collection of [open agent skills](https://opencode.ai/docs/skills) I keep improving. Each one lives under a category folder in [`skills/`](skills/) and stays small enough to read in full. Drop the ones you want into your own skills directory.
 
-Right now there are two, grouped under `skills/continuity/`. That list will grow.
+Right now there are three, under `skills/continuity/` and `skills/creativity/`. That list will grow.
 
 ## Session Handoff
 
@@ -46,6 +47,12 @@ It records the context, the options considered, the accepted tradeoffs, the reje
 
 Session Handoff hands decision capture over to this skill rather than owning it itself.
 
+## Idea Developer
+
+A rough idea is not a plan. Idea Developer takes the half-formed tech or product thought and interviews it into a one-page plan. It asks one question at a time, adapts to whatever the user just said, and probes the weak spots: an audience of "everyone", a differentiator of "it's just better", a scope that quietly covers three products. After five to ten questions it hands back a filled template with a one-liner, problem, audience, solution, differentiators, MVP scope, risks, and next actions. The template fills as the conversation runs, so the plan is already written by the time the interview ends.
+
+It ships with `references/questions.md`, the question bank organized by theme, each section carrying a probe that names the weak spot to push on.
+
 ## Installation
 
 Install every skill in this repo:
@@ -59,6 +66,7 @@ Or add a single one:
 ```
 npx skills add pkhamre/skills --skill session-handoff
 npx skills add pkhamre/skills --skill decision-log
+npx skills add pkhamre/skills --skill idea-developer
 ```
 
 ## Maintaining this collection

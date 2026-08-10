@@ -1,5 +1,11 @@
 # Session Log
 
+## 2026-08-10 10:11 UTC
+Follow-up to the idea-developer session. Per the user's go-ahead, updated the root `README.md` to document the `idea-developer` skill and the `creativity` category: added an Idea Developer section, added it to the nav links and the single-skill install commands, and updated the skill count line. New prose passes `anti-ai-slop-writing` (0 em dashes, no banned words; verified with grep). Then committed the full state for the first time: the skill under `skills/creativity/`, the README update, and the session docs (HANDOFF, SESSION_LOG, DECISIONS).
+
+## 2026-08-10 09:27 UTC
+Created the `idea-developer` skill at `skills/creativity/idea-developer/`, introducing the new `creativity` category. The skill turns a rough tech/product idea into a one-page plan: an adaptive interview (question bank in `references/questions.md`) asks probing questions one at a time, pushes on weak spots, and progressively fills a standard template (one-liner, problem, audience, solution, differentiators, MVP scope, risks, next actions). Prose passes `anti-ai-slop-writing` (0 em dashes, no banned words). Ran the skill-creator eval loop: 3 test ideas (parking app, tab-manager extension, git-history CLI) with with-skill and no-skill baselines; with-skill runs scored 10/10 on template-structure assertions and produced 506-640 word one-pagers versus 1105-2032 word baselines, reviewed via a static eval viewer. Started a trigger-description eval using the `opencode` CLI, but the user called the eval/testing overcomplicated and said they are happy with the skill as-is, so no description changes were made. Eval workspace left at `/tmp/opencode/idea-developer-workspace/`. Nothing committed this session; `skills/creativity/` is untracked.
+
 ## 2026-08-09 20:57 UTC
 Post-handoff visual tweak. Per user request, restored the yellow OPEN AGENT SKILLS eyebrow so it renders visibly in `hero.svg`: moved the centered title block down from `translate(600 0)` to `translate(600 30)` (canvas bumped 300 to 320 tall) so the eyebrow was no longer clipped by the top edge. Committed as `9824ec4`. Everything else in this session (README update, decision-log visuals, hero title-only simplification, AGENTS.md) covered in the prior entry.
 

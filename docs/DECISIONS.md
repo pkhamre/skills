@@ -42,3 +42,11 @@
 
 - **Decision:** README now documents both authored skills (Session Handoff and Decision Log) and the category layout.
 - **Rationale:** The repo contains two authored skills; the overview should match that.
+
+## 2026-08-10 — idea-developer skill
+
+- **Decision:** Add an `idea-developer` skill under a new `skills/creativity/` category. It turns a rough tech/product idea into a one-page actionable plan through a short adaptive interview that asks probing questions one at a time and fills a plan template as the conversation goes.
+- **Rationale:** Users arrive with half-formed product ideas and the conversation drifts without structured questioning; forcing the useful questions and writing the answers into a plan while they are fresh hardens the idea into something the user can start on.
+- **Scope:** Tech/product ideas only; adaptive question bank (in `references/questions.md`) rather than a fixed checklist; medium depth (5-10 questions); standard one-page template (one-liner, problem, audience, solution, differentiators, MVP scope, risks, next actions); progressive fill during the conversation; questions actively probe weak spots like a vague audience or a missing differentiator.
+- **Rejected:** A full product plan with monetization and go-to-market sections (heavier than a one-pager); neutral questioning that only records answers; a fixed-sequence interview; filling the template only at the end.
+- **Evaluation:** skill-creator loop with 3 test cases (parking app, tab-manager extension, git-history CLI), with-skill vs no-skill baseline. With-skill runs scored 10/10 on template-structure assertions and produced 506-640 word one-pagers; baselines scored 0/10 and ran 1105-2032 words. Description optimization was deferred: the user is satisfied with the skill as-is.
