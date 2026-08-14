@@ -1,6 +1,6 @@
 ---
 name: agent-creator
-description: Create new opencode agent definitions. Use this skill whenever the user asks to make an agent: "create an agent", "add a subagent", "I need an agent that reviews PRs", "make me an agent for git history", "define an agent that writes release notes", or any plain-language request for a reusable helper that gets picked as the main assistant or delegated to. The skill interviews briefly for purpose, mode, model, and permissions, writes a valid agent file to the right scope (project .opencode/agent/ by default, global ~/.config/opencode/agent/ when the user implies a tool for every project), and reminds them to restart opencode. Do not use it for commands, skills, or plugins, which are separate definition types.
+description: 'Create new opencode agent definitions. Use this skill whenever the user asks to make an agent: "create an agent", "add a subagent", "I need an agent that reviews PRs", "make me an agent for git history", "define an agent that writes release notes", or any plain-language request for a reusable helper that gets picked as the main assistant or delegated to. The skill interviews briefly for purpose, mode, model, and permissions, writes a valid agent file to the right scope (project .opencode/agent/ by default, global ~/.config/opencode/agent/ when the user implies a tool for every project), and reminds them to restart opencode. Do not use it for commands, skills, or plugins, which are separate definition types.'
 ---
 
 # Agent Creator
