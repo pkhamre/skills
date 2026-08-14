@@ -6,6 +6,7 @@
   <a href="#session-handoff"><strong>Session Handoff</strong></a> ·
   <a href="#decision-log"><strong>Decision Log</strong></a> ·
   <a href="#idea-developer"><strong>Idea Developer</strong></a> ·
+  <a href="#agent-creator"><strong>Agent Creator</strong></a> ·
   <a href="#installation"><strong>Install</strong></a> ·
   <a href="#maintaining-this-collection"><strong>Add a skill</strong></a> ·
   <a href="#license"><strong>License</strong></a>
@@ -13,7 +14,7 @@
 
 A small, hand-maintained collection of [open agent skills](https://opencode.ai/docs/skills) I keep improving. Each one lives under a category folder in [`skills/`](skills/) and stays small enough to read in full. Drop the ones you want into your own skills directory.
 
-Right now there are three, under `skills/continuity/` and `skills/creativity/`. That list will grow.
+Right now there are four, under `skills/continuity/`, `skills/creativity/`, and `skills/opencode/`. That list will grow.
 
 ## Session Handoff
 
@@ -57,6 +58,16 @@ A rough idea is not a plan. Idea Developer takes the half-formed tech or product
 
 It ships with `references/questions.md`, the question bank organized by theme, each section carrying a probe that names the weak spot to push on.
 
+## Agent Creator
+
+Agents are just files with a strict shape: a YAML frontmatter from a fixed field list, and a body that becomes the prompt. The user thinks in plain language, the skill thinks in schema. Agent Creator turns a request like "I need an agent that reviews my pull requests" into a working `.opencode/agent/<name>.md`. It interviews briefly for purpose, mode, model, and permissions, writes a valid definition to the right scope, and reminds you to restart opencode, which loads config at startup and ignores new agents until then.
+
+<p align="center">
+  <img src="./assets/readme/agent-workflow.svg" width="100%" alt="Agent Creator workflow: take the plain-language ask, interview for purpose mode and permissions in one short message, write a valid agent file into .opencode/agent/.">
+</p>
+
+It ships with `references/agent-format.md`, the exact file format: locations, the allowed frontmatter fields, how permission rules behave, and worked examples.
+
 ## Installation
 
 Install every skill in this repo:
@@ -71,6 +82,7 @@ Or add a single one:
 npx skills add pkhamre/skills --skill session-handoff
 npx skills add pkhamre/skills --skill decision-log
 npx skills add pkhamre/skills --skill idea-developer
+npx skills add pkhamre/skills --skill agent-creator
 ```
 
 ## Maintaining this collection

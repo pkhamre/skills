@@ -15,6 +15,6 @@
 
     <text x="0" y="198" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="21" fill="#9aa4b0" text-anchor="middle">Each skill lives under a category in</text>
     <text x="0" y="226" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="21" fill="#9aa4b0" text-anchor="middle">skills/<tspan fill="#e6edf3">category</tspan>/</text>
-    <text x="0" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681" text-anchor="middle">MIT licensed · two skills, more coming</text>
+    <text x="0" y="266" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="19" fill="#6e7681" text-anchor="middle">MIT licensed · a growing set</text>
   </g>
 </svg>

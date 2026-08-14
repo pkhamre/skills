@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="170" viewBox="0 0 1200 170"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Agent Creator workflow</title>
+  <desc id="desc">Three stages: the plain-language ask, one short interview covering purpose mode model and permissions, and a valid agent file written to .opencode/agent/.</desc>
+
+  <rect width="1200" height="170" rx="20" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- The ask -->
+  <g transform="translate(64 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">1 · The ask</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">"Make me an agent that</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">reviews my pull requests."</text>
+  </g>
+
+  <line x1="392" y1="60" x2="484" y2="60" stroke="#e3b341" stroke-width="2"/>
+  <path d="M484 60 l-10 -6 v12 z" fill="#e3b341"/>
+
+  <!-- The interview -->
+  <g transform="translate(504 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">2 · The interview</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">Purpose, mode, model, and</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">permissions in one message.</text>
+  </g>
+
+  <line x1="832" y1="60" x2="924" y2="60" stroke="#e3b341" stroke-width="2"/>
+  <path d="M924 60 l-10 -6 v12 z" fill="#e3b341"/>
+
+  <!-- The agent file -->
+  <g transform="translate(944 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">3 · The agent file</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">A valid agent file at</text>
+    <text x="0" y="94" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="20" fill="#e6edf3">.opencode/agent/</text>
+  </g>
+</svg>
