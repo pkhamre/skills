@@ -50,3 +50,9 @@
 - **Scope:** Tech/product ideas only; adaptive question bank (in `references/questions.md`) rather than a fixed checklist; medium depth (5-10 questions); standard one-page template (one-liner, problem, audience, solution, differentiators, MVP scope, risks, next actions); progressive fill during the conversation; questions actively probe weak spots like a vague audience or a missing differentiator.
 - **Rejected:** A full product plan with monetization and go-to-market sections (heavier than a one-pager); neutral questioning that only records answers; a fixed-sequence interview; filling the template only at the end.
 - **Evaluation:** skill-creator loop with 3 test cases (parking app, tab-manager extension, git-history CLI), with-skill vs no-skill baseline. With-skill runs scored 10/10 on template-structure assertions and produced 506-640 word one-pagers; baselines scored 0/10 and ran 1105-2032 words. Description optimization was deferred: the user is satisfied with the skill as-is.
+
+## 2026-08-19 — Installer-facing skill grouping
+
+- **Decision:** Keep the repository's category layout as `skills/<category>/<name>/SKILL.md` and document category-scoped `npx skills add` commands using GitHub tree URLs.
+- **Rationale:** The Skills CLI already discovers categorized layouts, and a category URL lets users install a coherent subset without changing the default whole-repository install. The directory structure remains compatible with other Agent Skills consumers.
+- **Rejected:** Adding a Claude Code plugin marketplace manifest as the primary grouping mechanism. It would provide named bundles for Claude Code, but would make the repository's grouping tool-specific and would not improve the `npx skills add` workflow for other agents.

@@ -76,7 +76,28 @@ Install every skill in this repo:
 npx skills add pkhamre/skills
 ```
 
-Or add a single one:
+The skills are grouped by category. Install only one category by pointing the
+command at that category's directory:
+
+```text
+continuity  Session Handoff, Decision Log
+creativity  Idea Developer
+opencode    Agent Creator
+```
+
+```bash
+npx skills add https://github.com/pkhamre/skills/tree/main/skills/continuity --all
+npx skills add https://github.com/pkhamre/skills/tree/main/skills/creativity --all
+npx skills add https://github.com/pkhamre/skills/tree/main/skills/opencode --all
+```
+
+To browse the skills that a source exposes before installing:
+
+```bash
+npx skills add pkhamre/skills --list
+```
+
+Or add a single skill:
 
 ```
 npx skills add pkhamre/skills --skill session-handoff
@@ -87,7 +108,7 @@ npx skills add pkhamre/skills --skill agent-creator
 
 ## Maintaining this collection
 
-Adding a skill means creating `skills/<category>/<name>/SKILL.md` with a `name` and `description` in the frontmatter, plus any bundled `references/`, `scripts/`, or `assets/` it needs. The description is what makes it trigger, so it should say both what the skill does and when to reach for it. Keep the body under a few hundred lines and push detail into reference files. See [opencode's skill docs](https://opencode.ai/docs/skills) for the layout.
+Adding a skill means creating `skills/<category>/<name>/SKILL.md` with a `name` and `description` in the frontmatter, plus any bundled `references/`, `scripts/`, or `assets/` it needs. `npx skills add` discovers this two-level catalog layout, so keep the category meaningful and stable. The description is what makes it trigger, so it should say both what the skill does and when to reach for it. Keep the body under a few hundred lines and push detail into reference files. See [opencode's skill docs](https://opencode.ai/docs/skills) for the layout.
 
 Installed upstream skills and the opencode install manifest aren't tracked here. Authored skills are the contents of `skills/`.
 
