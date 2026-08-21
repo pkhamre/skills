@@ -1,0 +1,17 @@
+00:00 Alright, welcome back. Today I want to talk about RSS readers, and specifically why I stopped paying for one and built my own. RSS is one of those old technologies that refuses to die because it quietly solves a real problem: you get every post from every site you follow in one place, with no algorithm deciding what you see.
+
+00:45 The trigger was my hosted reader raising its price again. Third time in two years. I had hundreds of subscriptions, years of reading history, and no way to move it out without paying. That's when I started looking at what it would actually take to run a reader on a server I controlled.
+
+02:10 What I built is boring on purpose. A small Go binary, a SQLite database, and a plain HTML page. No JavaScript framework, no Docker swarm, no Kubernetes. The whole thing runs on a five dollar VPS and has been up for eleven months without me touching it.
+
+03:30 Let me walk the stack. The Go process fetches feeds, parses them, and stuffs entries into SQLite. The front end is server-rendered HTML with a little CSS. That's it. If you know Go and have written any SQL, this is a weekend project.
+
+06:15 The part I spent the most time on was fetching feeds politely. Some sites hammer you with redirects, some serve bad XML, some block default user agents. I built a fetch loop that respects conditional GET headers, backs off on errors, and only polls feeds that actually changed. That kept me off every blocklist I used to trip.
+
+09:40 The reading view is where I allowed myself one indulgence. No pagination. Every unread item from the last three days loads as one long scroll, and I can read it like a newspaper. Filtering happens by feed group, not by some importance score. I get a lot of feeds, but the good stuff surfaces on its own.
+
+12:05 Syncing between devices was the requirement that almost made me give up. I wanted read state shared between my phone and laptop. The answer turned out to be simple: the server is the source of truth, and the web page is the client. My phone just opens the same URL. Read state lives server-side, so there's nothing to sync.
+
+15:20 Cost runs about six dollars a month all in. The VPS is five, the domain is a rounding error. Compare that to what the hosted readers charge for the same thing, and the payback was about four months.
+
+17:00 If you want to try it, the code is on GitHub under my handle, and there's a setup script that gets you from empty VPS to working reader in about twenty minutes. I'll leave a link in the description. Thanks for watching, and I'll see you in the next one.

@@ -1,0 +1,57 @@
+{
+  "skill_name": "youtube-seo",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I recorded a podcast episode where I walk through how I built my own self-hosted RSS reader. I'm going to upload it to YouTube and I want the full SEO package. The transcript is in the attached file with timestamps.",
+      "expected_output": "A structured markdown SEO document saved as a .seo.md file with three title options, a copy-paste description with chapter timestamps derived from the transcript's real timecodes, comma-separated tags, a pinned comment, and thumbnail suggestions.",
+      "files": ["evals/files/timestamped-podcast-transcript.txt"],
+      "expectations": [
+        "Output is a markdown document saved to a .seo.md file",
+        "Document has a Titles section with exactly three title options",
+        "Each title is under 70 characters",
+        "Document has a Description section containing chapter timestamps",
+        "First chapter timestamp is 0:00",
+        "At least one chapter timestamp matches a timecode present in the source transcript",
+        "Document has a Tags section with comma-separated tags",
+        "Total tag characters stay under 500",
+        "Document has a Pinned Comment section that invites a reply",
+        "Document has a Thumbnail Suggestions section with two or more suggestions"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Here's the transcript from a video I just recorded about setting up a home recording studio for podcasting. I'd like you to create the SEO for uploading it to YouTube. I don't have timestamps in the transcript.",
+      "expected_output": "A structured markdown SEO document saved as a .seo.md file with three title options, a description with chapter timestamps estimated from the transcript's topic shifts and clearly flagged as approximate, comma-separated tags, a pinned comment, and thumbnail suggestions.",
+      "files": ["evals/files/raw-audio-setup-transcript.txt"],
+      "expectations": [
+        "Output is a markdown document saved to a .seo.md file",
+        "Document has a Titles section with exactly three title options",
+        "Document has a Description section containing chapter timestamps",
+        "First chapter timestamp is 0:00",
+        "Chapter timestamps are marked as estimates or approximations",
+        "Document flags that the timestamps need verification before publishing",
+        "Document has a Tags section with comma-separated tags under 500 characters",
+        "Document has a Pinned Comment section that invites a reply",
+        "Document has a Thumbnail Suggestions section with two or more suggestions",
+        "Document has at least three chapters in the description"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I run a YouTube channel about home gardening for total beginners, and I want this next video to rank for the phrase 'beginner vegetable garden'. Here's the transcript of the video I recorded. Please build the SEO package for it.",
+      "expected_output": "A structured markdown SEO document saved as a .seo.md file. Titles, description, and tags center on the provided target keyword and the stated beginner gardening audience. Three titles, description with estimated chapters flagged as approximate, comma-separated tags under 500 characters, pinned comment, and thumbnail suggestions.",
+      "files": ["evals/files/raw-gardening-transcript.txt"],
+      "expectations": [
+        "Output is a markdown document saved to a .seo.md file",
+        "Document has a Titles section with exactly three title options",
+        "The phrase 'beginner vegetable garden' appears in at least one title or in the description's first 150 characters",
+        "Document has a Description section containing chapter timestamps flagged as estimates",
+        "Document has a Tags section with comma-separated tags under 500 characters",
+        "Tags include gardening-specific phrases drawn from the transcript content",
+        "Document has a Pinned Comment section that invites a reply",
+        "Document has a Thumbnail Suggestions section with two or more suggestions"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+So I recorded a lot of terrible audio before I figured any of this out, and this video is everything I wish someone had told me when I started. The setup I'm about to show you costs about three hundred dollars total, which is nothing compared to what I spent on microphones I returned.
+
+First, the room matters more than the microphone. If you're recording in a room with bare walls and a hard floor, every word you say comes back at you as slap echo. The cheap fix is soft stuff: a rug, some curtains, even a duvet hung on the wall behind you. I moved my desk so I'm facing the longest wall and put a bookshelf behind my chair, and it genuinely fixed half my problems before I bought anything.
+
+Second, get the microphone position right. A dynamic microphone like the one I'm using wants to be about a fist and a half from your mouth, just off to the side so you're not blasting plosives straight down the capsule. If you hear popping on your P's and B's, move it further off axis, don't reach for a pop filter first. The filter helps, but the angle is the actual fix.
+
+Third, gain staging. Set your interface so your voice peaks around minus twelve decibels on the meter. That sounds quiet, and that's the point. You want headroom, because the loudest sound in a recording is usually not your voice. It's the chair squeaking, the truck outside, the neighbor's dog. Recording quieter means those stay out of the ceiling and you can pull them down later instead of them slamming into the limit.
+
+Fourth, the settings I actually use. I record at forty-eight kilohertz, twenty-four bit. I do not use the interface's built-in processing, no compressor, no EQ, nothing. Everything gets processed after the fact, because I'd rather fix a problem I can hear than bake a guess into the file forever.
+
+Then the part nobody warns you about: editing is where podcasts get loud. Or quiet, rather. I apply a high-pass filter at eighty hertz to kill rumble, I do a gentle de-esser because I have a lot of S's, and I use a compressor with about three to one ratio and a slow attack so the transients survive. The final step is a limiter set to negative one decibel so nothing clips on any platform.
+
+If you're just starting out, buy a used dynamic mic, a cheap interface, and a rug, and spend your money on acoustic treatment before you upgrade anything else. You can make a three hundred dollar setup sound professional, but no microphone fixes a bad room.
