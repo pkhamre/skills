@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="170" viewBox="0 0 1200 170"
+     role="img" aria-labelledby="title desc">
+  <title id="title">YouTube SEO workflow</title>
+  <desc id="desc">Three stages: a transcript or recording is read in full, becomes the upload package with titles chapters tags comment and thumbnails, and lands in a .seo.md file ready to paste from.</desc>
+
+  <rect width="1200" height="170" rx="20" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- The transcript -->
+  <g transform="translate(64 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">1 · Transcript</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">A recording, podcast, or</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">pasted notes, read in full.</text>
+  </g>
+
+  <line x1="392" y1="60" x2="484" y2="60" stroke="#e3b341" stroke-width="2"/>
+  <path d="M484 60 l-10 -6 v12 z" fill="#e3b341"/>
+
+  <!-- The package -->
+  <g transform="translate(504 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">2 · The package</text>
+    <text x="0" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">Titles, chapters, tags,</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">comment, and thumbnails.</text>
+  </g>
+
+  <line x1="832" y1="60" x2="924" y2="60" stroke="#e3b341" stroke-width="2"/>
+  <path d="M924 60 l-10 -6 v12 z" fill="#e3b341"/>
+
+  <!-- The file -->
+  <g transform="translate(944 44)">
+    <text x="0" y="30" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="26" font-weight="700" fill="#e3b341">3 · The file</text>
+    <text x="0" y="66" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="20" fill="#e6edf3">name.seo.md</text>
+    <text x="0" y="94" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',PingFang SC,sans-serif" font-size="20" fill="#9aa4b0">ready to paste from.</text>
+  </g>
+</svg>

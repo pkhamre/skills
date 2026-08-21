@@ -7,6 +7,7 @@
   <a href="#decision-log"><strong>Decision Log</strong></a> ·
   <a href="#idea-developer"><strong>Idea Developer</strong></a> ·
   <a href="#agent-creator"><strong>Agent Creator</strong></a> ·
+  <a href="#youtube-seo"><strong>YouTube SEO</strong></a> ·
   <a href="#installation"><strong>Install</strong></a> ·
   <a href="#maintaining-this-collection"><strong>Add a skill</strong></a> ·
   <a href="#license"><strong>License</strong></a>
@@ -14,7 +15,7 @@
 
 A small, hand-maintained collection of [open agent skills](https://opencode.ai/docs/skills) I keep improving. Each one lives under a category folder in [`skills/`](skills/) and stays small enough to read in full. Drop the ones you want into your own skills directory.
 
-Right now there are four, under `skills/continuity/`, `skills/creativity/`, and `skills/opencode/`. That list will grow.
+Right now there are five, under `skills/continuity/`, `skills/creativity/`, `skills/content/`, and `skills/opencode/`. That list will grow.
 
 ## Session Handoff
 
@@ -68,6 +69,16 @@ Agents are just files with a strict shape: a YAML frontmatter from a fixed field
 
 It ships with `references/agent-format.md`, the exact file format: locations, the allowed frontmatter fields, how permission rules behave, and worked examples.
 
+## YouTube SEO
+
+Publishing a video is easy; making it findable is not. YouTube SEO takes a transcript, a podcast recording, or plain spoken-word notes and turns it into the full upload package: three title options, a search-optimized description with chapter timestamps, comma-separated tags that stay inside YouTube's limits, a pinned comment meant to draw replies, and thumbnail suggestions, all saved as one markdown file you can copy sections from while uploading. It reads the whole transcript before deciding anything, looks through the repo for your past transcripts and channel voice so the copy stays consistent, and asks only for what it can't find. When a transcript has no timecodes it estimates the chapter boundaries and marks every timestamp as approximate so you can verify before publishing. The copy stays conservative and honest, and it leans on the anti-ai-slop-writing skill when one is around.
+
+<p align="center">
+  <img src="./assets/readme/youtube-seo-workflow.svg" width="100%" alt="YouTube SEO workflow: start with a transcript or recording read in full, turn it into the upload package with titles chapters tags comment and thumbnails, close with a .seo.md file ready to paste from.">
+</p>
+
+It ships with `references/youtube-platform-limits.md`, the title, description, tag, and chapter constraints that keep the output paste-ready.
+
 ## Installation
 
 Install every skill in this repo:
@@ -82,12 +93,14 @@ command at that category's directory:
 ```text
 continuity  Session Handoff, Decision Log
 creativity  Idea Developer
+content     YouTube SEO
 opencode    Agent Creator
 ```
 
 ```bash
 npx skills add https://github.com/pkhamre/skills/tree/main/skills/continuity --all
 npx skills add https://github.com/pkhamre/skills/tree/main/skills/creativity --all
+npx skills add https://github.com/pkhamre/skills/tree/main/skills/content --all
 npx skills add https://github.com/pkhamre/skills/tree/main/skills/opencode --all
 ```
 
@@ -104,6 +117,7 @@ npx skills add pkhamre/skills --skill session-handoff
 npx skills add pkhamre/skills --skill decision-log
 npx skills add pkhamre/skills --skill idea-developer
 npx skills add pkhamre/skills --skill agent-creator
+npx skills add pkhamre/skills --skill youtube-seo
 ```
 
 ## Maintaining this collection
